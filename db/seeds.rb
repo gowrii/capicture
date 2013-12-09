@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Game.create!(
+	theme: "default",
+)
+
+Board.create!(
+	name: "user's default",
+	game_id: 1
+)
+
+Clue.create!(
+	question: "find default!",
+	board_id: 1
+)
