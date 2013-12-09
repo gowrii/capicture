@@ -1,3 +1,6 @@
-Board Show Page
+<h1>Board Show Page</h1>
 
 <%= @board.name %>
+<% @board.clues.each do |clue| %>
+	<%= clue.question %>
+<% end %>
