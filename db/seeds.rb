@@ -15,6 +15,6 @@ Board.create!(
 )
 
 Clue.create!(
-	question: "find default!",
+	question: ["find one noodle!", "find a cat!", "find an elephant!", "find an eyelash!"],
 	board_id: 1
 )
