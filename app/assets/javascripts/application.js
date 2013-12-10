@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$('button').on('click', function() {
-		$(this).remove();
+	$('.clue-box').on('click button', function() {
+		$(this).slideUp('slow');
 	});
 });
