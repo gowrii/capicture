@@ -16,7 +16,11 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$('.clue-box').on('click button', function() {
-		$(this).slideUp('slow');
+	$('.clue-box').not(':first').hide();
+});
+
+$(document).ready(function() {
+	$('button').on('click', function() {
+		$(this).parent().next().show();
 	});
 });
