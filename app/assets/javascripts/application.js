@@ -20,13 +20,14 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	$('button').on('click', function() {
-		$(this).parent().next().show();
+	$('input[type=submit]').on('click', function() {
+		$(this).parent().parent().next().show();
 	});
 
-	$('button').on('click', function() {
+	$('input[type=submit]').on('click', function() {
 		$(this).prop({
 			disabled: true
 		});
+		$(this).parent().append("what");
 	});
 });
