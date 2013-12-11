@@ -7,7 +7,7 @@
 	<div class="clue-box">
 		<%= clue.question %>
 
-		<%= form_for [clue, @answer], :html => {:id => "new_answer_#{i}"}  do |f| %>
+		<%= form_for [clue, @answer], :html => {:id => "new_answer_#{i}"}, remote: true do |f| %>
 			<%= f.label :input, :for => "answer_input_#{i}" %>
 			<%= f.text_field :input, :id => "answer_input_#{i}" %>
 			<%= f.submit %>

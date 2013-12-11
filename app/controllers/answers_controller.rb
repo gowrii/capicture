@@ -8,10 +8,14 @@ class AnswersController < ApplicationController
 	def create
 		@answer = Answer.new
 		
-		if @answer.save
-			redirect_to board_path(@board)
-		else
-			render :new
+		respond_to do |format|
+			if @answer.save
+				format.html { redirect_to board_path(@board) }
+				format.js {}
+			else
+				format.html { render :new }
+				format.js {}
+			end
 		end
 	end
 
