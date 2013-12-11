@@ -2,27 +2,15 @@
 
 <p><%= @board.name %></p>
 
-<div class="clue-box">
-	<form>
-		<%= @board.clue %>
-		<input type="submit" value="Submit">
-	</form>
-</div>
 
-<div class="clue-box">
-	<form>
-		<input type="submit" value="Submit">
-	</form>
-</div>
+<% @board.clues.each_with_index do |clue, i| %>
+	<div class="clue-box">
+		<%= clue.question %>
 
-<div class="clue-box">
-	<form>
-		<input type="submit" value="Submit">
-	</form>
-</div>
-
-<div class="clue-box">
-	<form>
-		<input type="submit" value="Submit">
-	</form>
-</div>
+		<%= form_for [clue, @answer], :html => {:id => "new_answer_#{i}"}  do |f| %>
+			<%= f.label :input, :for => "answer_input_#{i}" %>
+			<%= f.text_field :input, :id => "answer_input_#{i}" %>
+			<%= f.submit %>
+		<% end %>
+	</div>
+<% end %>

@@ -14,20 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function() {
-	$('.clue-box').not(':first').hide();
-});
-
-$(document).ready(function() {
-	$('input[type=submit]').on('click', function() {
-		$(this).parent().parent().next().show();
-	});
-
-	$('input[type=submit]').on('click', function() {
-		$(this).prop({
-			disabled: true
-		});
-		$(this).parent().append("what");
-	});
-});
