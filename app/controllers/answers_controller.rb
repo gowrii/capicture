@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
 	end
 
 	def create
-		@answer = @clue.answers.build(answer_params)
+		@answer = Answer.new
 		
 		if @answer.save
 			redirect_to board_path(@board)

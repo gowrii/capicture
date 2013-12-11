@@ -5,6 +5,8 @@ $(document).ready(function() {
 $(document).ready(function() {
 
 	$('.new_answer').on('submit', function(event) {
+		event.preventDefault();
+		
 		console.log(event);
 
 		$(this).find('input[type=submit]').prop({
