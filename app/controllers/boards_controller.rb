@@ -3,6 +3,7 @@ class BoardsController < ApplicationController
 	def show
 		@board = Board.find(params[:id])
 		@clue = @board.clues.build
+		@answer = @clue.answers.build
 	end
 
 	def new
