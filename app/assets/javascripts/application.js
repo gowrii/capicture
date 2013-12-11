@@ -23,4 +23,10 @@ $(document).ready(function() {
 	$('button').on('click', function() {
 		$(this).parent().next().show();
 	});
+
+	$('button').on('click', function() {
+		$(this).prop({
+			disabled: true
+		});
+	});
 });
