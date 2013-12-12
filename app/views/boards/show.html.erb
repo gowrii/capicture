@@ -8,10 +8,14 @@
 
 		<%= form_for [clue, @answer], :html => {:multipart => true, :id => "new_answer_#{i}"} do |f| %>
 
-			<div class="user-input"></div>
+			<div class="user-input">
+				<% if clue.answer %>
+					<%= clue.answer.input %>
+				<% end %>
+			</div>
 		
-			<%= f.label :photo, :for => "answer_input_#{i}" %>
-			<%= f.file_field :photo, :id => "answer_input_#{i}" %>
+			<%= f.label :input, :for => "answer_input_#{i}" %>
+			<%= f.text_field :input, :id => "answer_input_#{i}" %>
 			<%= f.submit %>
 
 		<% end %>

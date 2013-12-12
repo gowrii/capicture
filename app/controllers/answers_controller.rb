@@ -16,7 +16,7 @@ class AnswersController < ApplicationController
 		respond_to do |format|
 			if @answer.save
 				format.html { redirect_to board_path(@clue.board) }
-				format.js { render :json => { image_path: @answer.image_path(:thumb)} }
+				format.js { render :json => { input: @answer.input} }
 			else
 				format.html { render :new }
 				format.js {}
@@ -26,7 +26,7 @@ class AnswersController < ApplicationController
 
 	private
 	def answer_params
-		params.require(:answer).permit(:photo, :clue_id)
+		params.require(:answer).permit(:input, :clue_id)
 	end
 
 	def load_clue

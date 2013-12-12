@@ -5,12 +5,11 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$('.new_answer').on('submit', function(event) {
-
 		event.preventDefault();
 
-		var url: "/boards/:id";
+		var url = $(this).attr("action");
 		var self = $(this);
-		var data: $(this).serialize();
+		var data = $(this).serialize();
 
 		$.ajax({
 			type: "POST",
@@ -18,7 +17,7 @@ $(document).ready(function() {
 			data: data,
 			dataType: "json"
 		}).done(function(result) {
-			$('.user-input').html("<img src='" + result.image_path + "'/>");
+			$('.user-input').html(result.input);
 
 			self.find('input[type=submit]').prop({
 				disabled: true
