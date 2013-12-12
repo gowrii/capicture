@@ -1,12 +1,17 @@
 class AnswersController < ApplicationController
 	before_filter :load_clue
 
+	def show
+		@answer = Answer.find(params[:id])
+		@clue = Clue.find_by_id(params[:clue_id])
+	end
+
 	def new
 		@answer = Answer.new
 	end
 
 	def create
-		@answer = Answer.new(answer_params)
+		@answer = @clue.build_answer(answer_params)
 		
 		respond_to do |format|
 			if @answer.save

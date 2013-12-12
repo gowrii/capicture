@@ -3,21 +3,19 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-
 	$('.new_answer').on('submit', function(event) {
+		var self = $(this),
+				value = self.find('input[type=text]').val();
+
 		event.preventDefault();
 		
-		// console.log();
-		
-		$(this).find('input[type=submit]').prop({
+		self.find('input[type=submit]').prop({
 			disabled: true
 		});
 
-	});
+		self.parent().next().show();		
 
-	$('input[type=submit]').on('click', function() {
-		$(this).parent().parent().next().show();
+		self.find('.user-input').html(value);
 
-		$(this).parent().append($('#answer_input_0').val());
 	});
 });
