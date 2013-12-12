@@ -5,13 +5,18 @@
 
 <% @board.clues.each_with_index do |clue, i| %>
 	<div class="clue-box">
-		<%= clue.question %>
+		<strong><%= clue.question %></strong>
 
-		<%= form_for [clue, @answer], :html => {:id => "new_answer_#{i}"}, remote: true do |f| %>
-			<%= f.label :input, :for => "answer_input_#{i}" %>
-			<%= f.text_field :input, :id => "answer_input_#{i}" %>
+		<%= form_for [clue, @answer], :html => {:multipart => true, :id => "new_answer_#{i}"}, remote: true do |f| %>
+
+			<div class="user-input">
+				<%= image_tag clue.answer.photo_url.to_s %>
+			</div>
+		
+			<%= f.label :photo, :for => "answer_input_#{i}" %>
+			<%= f.file_field :photo, :id => "answer_input_#{i}" %>
 			<%= f.submit %>
-			<div class="user-input"></div>
+
 		<% end %>
 	</div>
 <% end %>

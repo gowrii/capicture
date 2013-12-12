@@ -1,11 +1,12 @@
 $(document).ready(function() {
 	$('.clue-box').not(':first').hide();
+	$('.user-input').hide();
 });
 
 $(document).ready(function() {
 	$('.new_answer').on('submit', function(event) {
-		var self = $(this),
-				value = self.find('input[type=text]').val();
+		var self = $(this);
+		var value = self.find('input[type=file]').val();
 
 		event.preventDefault();
 		
@@ -13,7 +14,8 @@ $(document).ready(function() {
 			disabled: true
 		});
 
-		self.parent().next().show();		
+		self.parent().next().show();
+		self.find('div').show();		
 
 		self.find('.user-input').html(value);
 

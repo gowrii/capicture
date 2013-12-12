@@ -4,7 +4,14 @@
 
 .clue-box {
 	border: 1px solid black;
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+}
+
+.user-input {
+	border: 1px solid green;
 	width: 200px;
-	height: 80px;
+	height: 100px;
 	margin: 10px;
 }
