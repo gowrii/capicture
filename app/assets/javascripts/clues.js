@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('.new_answer').on('submit', function(event) {
 		event.preventDefault();
 		
-		console.log(event);
+		// console.log();
 		
 		$(this).find('input[type=submit]').prop({
 			disabled: true
@@ -18,6 +18,6 @@ $(document).ready(function() {
 	$('input[type=submit]').on('click', function() {
 		$(this).parent().parent().next().show();
 
-		$(this).parent().append("what");
+		$(this).parent().append($('#answer_input_0').val());
 	});
 });

@@ -2,7 +2,7 @@ class CluesController < ApplicationController
 	before_filter :load_board	
 
 	def create
-		@question = Board.new
+		@clue = Clue.new
 	end
 
 	def show

@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
 	end
 
 	def create
-		@answer = Answer.new
+		@answer = Answer.new(answer_params)
 		
 		respond_to do |format|
 			if @answer.save
@@ -21,7 +21,7 @@ class AnswersController < ApplicationController
 
 	private
 	def answer_params
-		params.require(:answer).permit(:input)
+		params.require(:answer).permit(:input, :clue_id)
 	end
 
 	def load_clue
