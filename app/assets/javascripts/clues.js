@@ -5,19 +5,30 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$('.new_answer').on('submit', function(event) {
-		var self = $(this);
-		var value = self.find('input[type=file]').val();
 
 		event.preventDefault();
-		
-		self.find('input[type=submit]').prop({
-			disabled: true
+
+		var url: "/boards/:id";
+		var self = $(this);
+		var data: $(this).serialize();
+
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: data,
+			dataType: "json"
+		}).done(function(result) {
+			$('.user-input').html("<img src='" + result.image_path + "'/>");
+
+			self.find('input[type=submit]').prop({
+				disabled: true
+			});
+
+			self.parent().next().show();
+			self.find('div').show();		
 		});
-
-		self.parent().next().show();
-		self.find('div').show();		
-
-		self.find('.user-input').html(value);
 
 	});
 });
+
+

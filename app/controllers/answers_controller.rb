@@ -12,11 +12,11 @@ class AnswersController < ApplicationController
 
 	def create
 		@answer = @clue.build_answer(answer_params)
-		
+
 		respond_to do |format|
 			if @answer.save
-				format.html { redirect_to board_path(@board) }
-				format.js {}
+				format.html { redirect_to board_path(@clue.board) }
+				format.js { render :json => { image_path: @answer.image_path(:thumb)} }
 			else
 				format.html { render :new }
 				format.js {}
