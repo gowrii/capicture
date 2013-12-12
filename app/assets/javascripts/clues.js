@@ -8,7 +8,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		
 		console.log(event);
-
+		
 		$(this).find('input[type=submit]').prop({
 			disabled: true
 		});
