@@ -8,9 +8,7 @@
 
 		<%= form_for [clue, @answer], :html => {:multipart => true, :id => "new_answer_#{i}"} do |f| %>
 
-			<div class="user-input">
-				<%= image_tag clue.answer.photo_url %>
-			</div>
+			<div class="user-input"></div>
 		
 			<%= f.label :photo, :for => "answer_input_#{i}" %>
 			<%= f.file_field :photo, :id => "answer_input_#{i}" %>
