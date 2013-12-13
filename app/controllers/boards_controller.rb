@@ -2,7 +2,6 @@ class BoardsController < ApplicationController
 
 	def show
 		@board = Board.find(params[:id])
-		# @clue = @board.clues.build
 		@answer = Answer.new
 	end
 
@@ -23,9 +22,7 @@ class BoardsController < ApplicationController
 	end
 
 	private
-
 	def board_params
 		params.require(:board).permit(:name)
 	end
-
 end

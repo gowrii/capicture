@@ -17,7 +17,7 @@ $(document).ready(function() {
 			data: data,
 			dataType: "json"
 		}).done(function(result) {
-			$('.user-input').html(result.input);
+			$('.user-input').last().html(result.input);
 
 			self.find('input[type=submit]').prop({
 				disabled: true

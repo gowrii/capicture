@@ -11,7 +11,8 @@ class AnswersController < ApplicationController
 	end
 
 	def create
-		@answer = @clue.build_answer(answer_params)
+		@answer = @clue.answers.build(answer_params)
+		@answer.user = current_user
 
 		respond_to do |format|
 			if @answer.save

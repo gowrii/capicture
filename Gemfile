@@ -33,6 +33,11 @@ group :development do
 	gem 'quiet_assets'
 end
 
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
