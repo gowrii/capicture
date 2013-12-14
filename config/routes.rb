@@ -1,4 +1,7 @@
 Capicture::Application.routes.draw do
+  resources :games do
+    resources :boards
+  end
 
   resources :boards do
     resources :clues
