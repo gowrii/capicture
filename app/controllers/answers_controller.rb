@@ -27,7 +27,7 @@ class AnswersController < ApplicationController
 
 	private
 	def answer_params
-		params.require(:answer).permit(:input, :clue_id)
+		params.require(:answer).permit(:input, :clue_id, :user_id)
 	end
 
 	def load_clue

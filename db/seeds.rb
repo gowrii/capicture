@@ -9,6 +9,11 @@ Game.create!(
 	theme: "default",
 )
 
+User.create!(
+	email: "user@user.com",
+	crypted_password: "password"
+)
+
 Board.create!(
 	name: "user's default",
 	game_id: 1
