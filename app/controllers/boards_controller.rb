@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+	before_filter :require_login, only: :secret
 
 	def show
 		@board = Board.find(params[:id])
