@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Game.create!(
 	theme: "default",
+	start_time: Time.now + 3.days,
+	end_time: Time.now + 4.days
 )
 
 User.create!(

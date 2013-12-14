@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	has_many :boards
 	has_many :answers
 
-	authenticate_with_sorcery!
+	authenticates_with_sorcery!
 
 	validates_confirmation_of :password
   validates_presence_of :password, :on => :create

@@ -1,0 +1,7 @@
+<h1>CAPICTURE GAMES HOMEPAGE</h1>
+
+<% @games.each do |game| %>
+	<h3><%= link_to game.theme, game_path(game) %></h3>
+	<p>Starts On: <%= game.start_time %></p>
+	<p>Closes On: <%= game.end_time %></p>
+<% end %>

@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
 	end
 
 	def create
-		@board = Board.new(board_params)
+		@board = @game.boards.build(board_params)
 		if @board.save
 			redirect_to board_path(@board)
 		else
