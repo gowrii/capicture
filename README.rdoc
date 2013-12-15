@@ -23,6 +23,22 @@ Things you may want to cover:
 
 * ...
 
+=== TODO
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Displaying the correct answer into the answer div on Board Show Page
+
+* Creating a new board from game page: link to the Board Show Page or move the code somewhere else? Presumably the Board New Page but the controller methods prevent this.
+
+* Saving the Board Show Page progress as user creates each answer (JavaScript plugin + gem)
+
+* Ability to submit entire board once completed and displaying entire board with user's answers (This is going to have to be the actual Board Show Page eventually)
+
+* Foundation: divs with settings in boards.css.scss not working
+
+== Stretch
+
+* Timer countdown to the start_time of every Game on Index page
+
+* A list of games (that are done) after each of their end_time on Index page
+
+* Further Styling either with Foundation or not as time permits
