@@ -1,5 +1,5 @@
 <h1><%= @game.theme %></h1>
 
-<%= @game.boards.each do |board| %>
-	<%= board.name %>
+<% @game.boards.each do |board| %>
+	<p><%= board.name %></p>
 <% end %>

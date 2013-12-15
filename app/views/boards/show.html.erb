@@ -9,7 +9,9 @@
 		<%= form_for [clue, @answer], :html => {:multipart => true, :id => "new_answer_#{i}"} do |f| %>
 
 			<div class="user-input">
-					<%= @answer.input %>
+				<% clue.answers.each do |answer| %>
+					<%= answer.input %>
+				<% end %>
 			</div>
 		
 			<%= f.label :input, :for => "answer_input_#{i}" %>
