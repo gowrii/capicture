@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
+		@board = Board.new
 		if current_user
 			@board = @game.boards.build
 		end
