@@ -1,5 +1,5 @@
 class Clue < ActiveRecord::Base
-	belongs_to :board
+	belongs_to :game
 	has_many :answers
 
 	def answered?(user)
