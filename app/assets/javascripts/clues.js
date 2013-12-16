@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('.clue-box').not(':first').hide();
-	$('.user-input').hide();
+	// $('.user-input').hide();
 });
 
 $(document).ready(function() {
