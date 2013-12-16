@@ -32,6 +32,6 @@ class BoardsController < ApplicationController
 	end
 
 	def load_game
-		@game = Game.find(params[:id])
+		@game = Game.find(params[:game_id])
 	end
 end
