@@ -4,7 +4,6 @@
 	<p><%= board.name %></p>
 <% end %>
 
-
 <h3> Join a Board </h3>
 	<% if current_user %>
 		<%=form_for [@game, @board] do |f| %>
