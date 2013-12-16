@@ -1,13 +1,10 @@
 Capicture::Application.routes.draw do
   resources :games do
-    resources :boards
-    resources :clues
+    resources :boards, shallow: true
+    resources :clues, shallow: true
   end
 
-  resources :clues do
-    resources :answers
-  end
-
+  resources :answers
   resources :users
   resources :sessions
 
