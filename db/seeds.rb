@@ -23,20 +23,20 @@ Board.create!(
 
 Clue.create!(
 	question: "number one?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number two?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number three?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number four?",
-	board_id: 1
+	game_id: 1
 )
