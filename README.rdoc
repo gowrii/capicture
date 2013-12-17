@@ -23,11 +23,11 @@ Things you may want to cover:
 
 * ...
 
-=== TODO
+== TODO
 
 * Add forms for new clues & games
 
-* Clues belong to a Game, not Board
+√ Clues belong to a Game, not Board
 
 * Displaying the correct answer into the answer div on Board Show Page
 
