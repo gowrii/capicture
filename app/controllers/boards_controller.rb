@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
 		if @board.save
 			redirect_to board_path(@board), notice: "Board Created!"
 		else
-			render :action => :show
+			render :show
 		end
 	end
 
