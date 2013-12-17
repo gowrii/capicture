@@ -1,8 +1,18 @@
 class CluesController < ApplicationController
-	before_filter :load_board	
+	before_filter :load_game	
+
+	def new
+		@clue = Clue.new
+	end
 
 	def create
-		@clue = Clue.new
+		@clue = @game.clues.build(clue_params)
+
+		if @clue.save
+			redirect_to games_url
+		else
+			render :new
+		end
 	end
 
 	def show
@@ -11,7 +21,11 @@ class CluesController < ApplicationController
 	end
 
 	private
-	def load_board
-		@board = Board.find(params[:board_id])
+	def clue_params
+		params.require(:clue).permit(:question, :game_id)
+	end
+
+	def load_game
+		@game = Game.find(params[:game_id])
 	end
 end
