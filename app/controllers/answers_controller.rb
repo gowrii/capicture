@@ -14,10 +14,8 @@ class AnswersController < ApplicationController
 		@answer = @clue.answers.build(answer_params)
 		@answer.user = current_user
 		
-	
 			if @answer.save
 				redirect_to board_path(current_user.boards.where(:game_id => @clue.game.id))
-				
 			else
 				render :new 
 			end
