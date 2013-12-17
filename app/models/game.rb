@@ -16,7 +16,10 @@ class Game < ActiveRecord::Base
     end
   end
 
-  def
-
+  def answers
+      self.completed_clues.each do |c|
+      c.answer
+    end
   end
+  
 end
