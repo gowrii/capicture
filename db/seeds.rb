@@ -13,7 +13,8 @@ Game.create!(
 
 User.create!(
 	email: "user@user.com",
-	crypted_password: "password"
+	crypted_password: "password",
+	password: "password"
 )
 
 Board.create!(
@@ -23,20 +24,20 @@ Board.create!(
 
 Clue.create!(
 	question: "number one?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number two?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number three?",
-	board_id: 1
+	game_id: 1
 )
 
 Clue.create!(
 	question: "number four?",
-	board_id: 1
+	game_id: 1
 )

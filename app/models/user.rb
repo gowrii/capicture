@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-	has_many :boards
+	has_many :games, :through => :boards
+  has_many :boards
 	has_many :answers
 
 	authenticates_with_sorcery!

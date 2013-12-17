@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
+		@board = Board.new
 		if current_user
 			@board = @game.boards.build
 		end
@@ -24,9 +25,7 @@ class GamesController < ApplicationController
 	end
 
 	private
-
 	def game_params
 		params.require(:game).permit(:start_time, :end_time, :theme)
 	end
-
 end
