@@ -13,16 +13,18 @@ class AnswersController < ApplicationController
 	def create
 		@answer = @clue.answers.build(answer_params)
 		@answer.user = current_user
-
-		if @answer.save
-			current_board = current_user.boards.where(:game_id => @clue.game.id)
-			redirect_to board_path(current_board)
-		else
-			render :new
-		end
+		
+	
+			if @answer.save
+				redirect_to board_path(current_user.boards.where(:game_id => @clue.game.id))
+				
+			else
+				
+			end
 	end
 
 	private
+
 	def answer_params
 		params.require(:answer).permit(:input, :clue_id, :user_id)
 	end

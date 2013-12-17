@@ -18,6 +18,10 @@ class Game < ActiveRecord::Base
     clues
   end
 
+  def uncompleted_clues( user )
+    clues - completed_clues(user)
+  end
+
   def user_answered( user )
     completed_clue_ids = completed_clues(user).map(&:id)
     # array of clue ids that are completed by user    

@@ -4,12 +4,16 @@ class BoardsController < ApplicationController
 	def show
 		@board = Board.find(params[:id])
 		@game = @board.game
+
 		@answer = Answer.new
+
+		# how do i make an instance variable which represents the "next" clue?
+		# HINT: I only want one clue.
+		@next_clue = @game.uncompleted_clues(current_user).first
 
 		# @clue = Clue.find(params[:id])
 		# @answer = @clue.answers.build
 
-		@user = current_user
 	end
 
 	def new

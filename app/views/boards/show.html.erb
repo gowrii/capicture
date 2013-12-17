@@ -3,25 +3,18 @@
 <h3><%= @board.name %></h3>
 
 <div>
-	<% @game.user_answered(@user).each do |answer| %>
+	<% @game.user_answered(current_user).each do |answer| %>
 		<p><%= answer.clue.question %><br>
 		<%= answer.input %></p>
 	<% end %>
 </div>
 
 <div>
-<% @board.game.clues.each do |clue| %>
-	<% unless @game.completed_clues(@user).include?(clue) %>
-	<h3><%= clue.question %></h3>
+	<h3><%= @next_clue.question %></h3>
 
-		<% unless @game.user_answered(@user).include?(@answer) %>
-			<%= form_for [clue, @answer] do |f| %>
-				<p><%= f.label :input %>
-				<%= f.text_field :input %></p>
-				<%= f.submit %>
-			<% end %>
-		<% end %>
-
+	<%= form_for [@next_clue, @answer] do |f| %>
+		<p><%= f.label :input %>
+		<%= f.text_field :input %></p>
+		<%= f.submit %>
 	<% end %>
-<% end %>
 </div>
