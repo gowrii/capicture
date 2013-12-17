@@ -5,7 +5,7 @@ class BoardsController < ApplicationController
 		@board = Board.find(params[:id])
 		@game = @board.game
 		@answer = Answer.new
-		@answers = []
+		@user = current_user
 	end
 
 	def new

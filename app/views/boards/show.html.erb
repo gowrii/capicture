@@ -4,9 +4,9 @@
 
 <div>
 
-	<% @game.completed_clues.each do |clue| %>
+	<% @game.completed_clues(@user).each do |clue| %>
 		<%= clue.question %>
-		<%= 
+
 	<% end %>
 
 </div>
