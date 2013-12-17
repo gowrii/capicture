@@ -13,13 +13,15 @@ class Game < ActiveRecord::Base
         # if the answer's game is this game
         clues << answer.clue
         # the answer's clue is inserted into array
+        return clues
       end
     end
   end
 
-  def answers
-      self.completed_clues.each do |c|
+  def user_answered
+    self.completed_clues.each do |c|
       c.answer
+      # returns every answer for clues answered for this game
     end
   end
 end

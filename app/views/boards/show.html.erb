@@ -2,22 +2,27 @@
 
 <p><%= @board.name %></p>
 
-<% @board.clues.each_with_index do |clue, i| %>
-	<div class="clue-box">
-		<strong><%= clue.question %></strong>
+<div>
+<% @board.clues.each do |clue| %>
+	<%= clue.question %>
 
-		<%= form_for [clue, @answer], :html => {:multipart => true, :id => "new_answer_#{i}"} do |f| %>
-
-			<div class="user-input">
-				<% clue.answers.each do |answer| %>
-					<%= answer.input %>
-				<% end %>
-			</div>
-		
-			<%= f.label :input, :for => "answer_input_#{i}" %>
-			<%= f.text_field :input, :id => "answer_input_#{i}" %>
-			<%= f.submit %>
-
+	<% if clue.game.completed_clues != nil %>
+<!-- 	assumes that completed_clues method will return array of clues -->
+		<% @board.user_answered do |answer| %>
+			<%= answer.input %>
 		<% end %>
-	</div>
+
+	<% else %>
+		<div>
+			<%= form_for [@clue, @answer] do |f| %>
+				<%= f.label :input %>
+				<%= f.text_field :input %>
+
+				<%= f.submit %>
+			<% end %>
+		</div>
+	<% end %>
+
 <% end %>
+</div>
+
