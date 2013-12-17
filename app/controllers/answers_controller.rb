@@ -13,12 +13,14 @@ class AnswersController < ApplicationController
 	def create
 		@answer = @clue.answers.build(answer_params)
 		@answer.user = current_user
-		
-			if @answer.save
-				redirect_to board_path(current_user.boards.where(:game_id => @clue.game.id))
-			else
-				render :new 
-			end
+
+		@board = current_user.boards.where(:game_id => @clue.game.id).first
+
+		if @answer.save
+			redirect_to board_path(@board)
+		else
+			render :new 
+		end
 	end
 
 	private

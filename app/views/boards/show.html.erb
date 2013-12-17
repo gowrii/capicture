@@ -2,19 +2,21 @@
 
 <h3><%= @board.name %></h3>
 
-<div>
+<div class="answered-clues">
 	<% @game.user_answered(current_user).each do |answer| %>
 		<p><%= answer.clue.question %><br>
 		<%= answer.input %></p>
 	<% end %>
 </div>
 
-<div>
-	<h3><%= @next_clue.question %></h3>
+<% if @board.user == current_user && @next_clue %>
+	<div class="unanswered-clues">
+		<h3><%= @next_clue.question %></h3>
 
-	<%= form_for [@next_clue, @answer] do |f| %>
-		<p><%= f.label :input %>
-		<%= f.text_field :input %></p>
-		<%= f.submit %>
-	<% end %>
-</div>
+		<%= form_for [@next_clue, @answer] do |f| %>
+			<p><%= f.label :input %>
+			<%= f.text_field :input %></p>
+			<%= f.submit %>
+		<% end %>
+	</div>
+<% end %>
