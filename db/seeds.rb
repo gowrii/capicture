@@ -11,6 +11,12 @@ Game.create!(
 	end_time: Time.now + 4.days
 )
 
+Game.create!(
+	theme: "FANCY ONE",
+	start_time: Time.now + 4.days,
+	end_time: Time.now + 5.days
+)
+
 User.create!(
 	email: "user@user.com",
 	crypted_password: "password",
@@ -19,7 +25,38 @@ User.create!(
 
 Board.create!(
 	name: "user's default",
-	game_id: 1
+	game_id: 1,
+	user_id: 1
+)
+
+Board.create!(
+	name: "board 2",
+	game_id: 1,
+	user_id: 1
+)
+
+Board.create!(
+	name: "wacky",
+	game_id: 1,
+	user_id: 1
+)
+
+Board.create!(
+	name: "wat wat",
+	game_id: 2,
+	user_id: 1
+)
+
+Board.create!(
+	name: "toodles",
+	game_id: 2,
+	user_id: 1
+)
+
+Board.create!(
+	name: "the other board",
+	game_id: 2,
+	user_id: 1
 )
 
 Clue.create!(
@@ -40,4 +77,24 @@ Clue.create!(
 Clue.create!(
 	question: "number four?",
 	game_id: 1
+)
+
+Clue.create!(
+	question: "number one?",
+	game_id: 2
+)
+
+Clue.create!(
+	question: "number two?",
+	game_id: 2
+)
+
+Clue.create!(
+	question: "number three?",
+	game_id: 2
+)
+
+Clue.create!(
+	question: "number four?",
+	game_id: 2
 )
