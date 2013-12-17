@@ -1,14 +1,11 @@
 <h1>Board Show Page</h1>
 
-<p><%= @board.name %></p>
+<h3><%= @board.name %></h3>
 
 <div>
-
-	<% @game.completed_clues(@user).each do |clue| %>
-		<%= clue.question %>
-		
+	<% @game.user_answered(@user).each do |answer| %>
+		<p><%= answer.clue.question %><br>
+		<%= answer.input %></p>
 	<% end %>
-
-
 </div>
 
