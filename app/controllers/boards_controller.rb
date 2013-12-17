@@ -5,6 +5,10 @@ class BoardsController < ApplicationController
 		@board = Board.find(params[:id])
 		@game = @board.game
 		@answer = Answer.new
+
+		# @clue = Clue.find(params[:id])
+		# @answer = @clue.answers.build
+
 		@user = current_user
 	end
 

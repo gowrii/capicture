@@ -4,7 +4,10 @@ Capicture::Application.routes.draw do
     resources :clues, shallow: true
   end
 
-  resources :answers
+  resources :clues do
+    resources :answers
+  end
+  
   resources :users
   resources :sessions
 
