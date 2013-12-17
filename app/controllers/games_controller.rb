@@ -5,10 +5,9 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
-		@board = Board.new
-		if current_user
-			@board = @game.boards.build
-		end
+
+		# if you want to be able to make a new board directly here
+		# @board = Board.new(:game_id => @game.id)
 	end
 
 	def new

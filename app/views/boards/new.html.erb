@@ -1,1 +1,17 @@
+<h3> New Board </h3>
+  <% if current_user %>
+    <%=form_for [@game, @board] do |f| %>
+      
+      <div class= "field">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name %>
+      </div>
 
+      <div class= "action">
+        <%= f.submit %>
+       </div>
+    
+    <% end %>
+  <% else %>
+    <p>Please <%= link_to "log in", new_session_path %> to create a board.</p>
+  <% end %>

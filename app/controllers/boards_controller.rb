@@ -13,11 +13,13 @@ class BoardsController < ApplicationController
 	end
 
 	def new
+		@game = Game.find(params[:game_id])
 		@board = @game.boards.build
 	end
 
 	def create
-		@board = @game.boards.build(board_params)
+		@game = Game.find(params[:game_id])
+		@board = @game.boards.new board_params
 		@board.user_id = current_user.id
 
 		if @board.save

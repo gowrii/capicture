@@ -14,14 +14,11 @@ class AnswersController < ApplicationController
 		@answer = @clue.answers.build(answer_params)
 		@answer.user = current_user
 
-		respond_to do |format|
-			if @answer.save
-				format.html { redirect_to board_path(@clue.board) }
-				format.js { render :json => { input: @answer.input} }
-			else
-				format.html { render :new }
-				format.js {}
-			end
+		if @answer.save
+			current_board = current_user.boards.where(:game_id => @clue.game.id)
+			redirect_to board_path(current_board)
+		else
+			render :new
 		end
 	end
 
