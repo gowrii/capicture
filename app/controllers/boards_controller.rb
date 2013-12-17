@@ -1,9 +1,9 @@
 class BoardsController < ApplicationController
 	before_filter :require_login, only: :secret
-	before_filter :load_game
 
 	def show
 		@board = Board.find(params[:id])
+		@game = @board.game
 		@answer = Answer.new
 		@answers = []
 	end
@@ -29,9 +29,5 @@ class BoardsController < ApplicationController
 	private
 	def board_params
 		params.require(:board).permit(:name, :user_id, :game_id)
-	end
-
-	def load_game
-		@game = Game.find(params[:game_id])
 	end
 end

@@ -3,26 +3,11 @@
 <p><%= @board.name %></p>
 
 <div>
-<% @board.clues.each do |clue| %>
-	<%= clue.question %>
 
-	<% if clue.game.completed_clues != nil %>
-<!-- 	assumes that completed_clues method will return array of clues -->
-		<% @board.user_answered do |answer| %>
-			<%= answer.input %>
-		<% end %>
-
-	<% else %>
-		<div>
-			<%= form_for [@clue, @answer] do |f| %>
-				<%= f.label :input %>
-				<%= f.text_field :input %>
-
-				<%= f.submit %>
-			<% end %>
-		</div>
+	<% @game.completed_clues.each do |clue| %>
+		<%= clue.question %>
+		<%= 
 	<% end %>
 
-<% end %>
 </div>
 
