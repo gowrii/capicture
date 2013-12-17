@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
 				redirect_to board_path(current_user.boards.where(:game_id => @clue.game.id))
 				
 			else
-				
+				render :new 
 			end
 	end
 
