@@ -13,7 +13,8 @@ Game.create!(
 
 User.create!(
 	email: "user@user.com",
-	crypted_password: "password"
+	crypted_password: "password",
+	password: "password"
 )
 
 Board.create!(
