@@ -9,3 +9,19 @@
 	<% end %>
 </div>
 
+<div>
+<% @board.game.clues.each do |clue| %>
+	<% unless @game.completed_clues(@user).include?(clue) %>
+	<h3><%= clue.question %></h3>
+
+		<%= form_for [@answer] do |f| %>
+			<% if @answer != @game.user_answered(@user) %>
+				<p><%= f.label :input %>
+				<%= f.text_field :input %></p>
+				<%= f.submit %>
+			<% end %>
+		<% end %>
+
+<% end %>
+<% end %>
+</div>
