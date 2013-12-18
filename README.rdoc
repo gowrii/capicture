@@ -25,22 +25,22 @@ Things you may want to cover:
 
 == TODO
 
-* Add forms for new clues & games
+√ Add forms for new clues & games
 
 √ Clues belong to a Game, not Board
 
-* Displaying the correct answer into the answer div on Board Show Page
+√ Displaying the correct answer into the answer div on Board Show Page
 
-* Saving the Board Show Page progress as user creates each answer (JavaScript plugin + gem)
+√ Saving the Board Show Page progress as user creates each answer
 
-* Creating a new board from game page: link to the Board Show Page or move the code somewhere else? Presumably the Board New Page but the controller methods prevent this.
-
-* Ability to submit entire board once completed and displaying entire board with user's answers (This is going to have to be the actual Board Show Page eventually)
+√ Creating a new board from game page: link to the Board Show Page or move the code somewhere else? Presumably the Board New Page but the controller methods prevent this.
 
 == Stretch
 
-* Timer countdown to the start_time of every Game on Index page
+* Foundation: divs with settings in boards.css.scss not working
+
+* jQuery plugin: Timer countdown to the start_time of every Game on Index page
 
 * A list of games (that are done) after each of their end_time on Index page
 
-* Foundation: divs with settings in boards.css.scss not working
+* add AJAX requests to Board show page's forms
