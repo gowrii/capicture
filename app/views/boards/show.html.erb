@@ -9,7 +9,7 @@
 	<% end %>
 </div>
 
-<% if @board.user == current_user && @next_clue %>
+<% if (@board.user == current_user) && @next_clue %>
 	<div class="unanswered-clues">
 		<h3><%= @next_clue.question %></h3>
 

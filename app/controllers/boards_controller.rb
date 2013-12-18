@@ -8,8 +8,6 @@ class BoardsController < ApplicationController
 		@answer = Answer.new
 		@user = @board.user
 
-		# how do i make an instance variable which represents the "next" clue?
-		# HINT: I only want one clue.
 		@next_clue = @game.uncompleted_clues(current_user).first
 	end
 
@@ -20,11 +18,13 @@ class BoardsController < ApplicationController
 
 	def create
 		@board = Board.new( board_params )
+		@game = Game.find(params[:game_id])
+		@board.user_id = current_user.id
 
 		if @board.save
 			redirect_to board_path(@board), notice: "Board Created!"
 		else
-			render :show
+			render :new
 		end
 	end
 
