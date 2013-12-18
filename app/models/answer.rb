@@ -3,6 +3,4 @@ class Answer < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :clue
 	mount_uploader :photo, PhotoUploader
-
-  validates :clue_id, uniqueness: true
 end
