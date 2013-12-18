@@ -5,17 +5,17 @@
 <div class="answered-clues">
 	<% @game.user_answered(current_user).each do |answer| %>
 		<p><%= answer.clue.question %><br>
-		<%= answer.input %></p>
+		<%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
 	<% end %>
 </div>
 
-<% if (@board.user == current_user) && @next_clue %>
+<% if @board.user == current_user && @next_clue %>
 	<div class="unanswered-clues">
 		<h3><%= @next_clue.question %></h3>
 
 		<%= form_for [@next_clue, @answer] do |f| %>
-			<p><%= f.label :input %>
-			<%= f.text_field :input %></p>
+			<p><%= f.label :photo %>
+			<%= f.file_field :photo %></p>
 			<%= f.submit %>
 		<% end %>
 	</div>
