@@ -6,13 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Game.create!(
+	title: "Game 1",
 	theme: "default",
 	start_time: Time.now + 3.days,
 	end_time: Time.now + 4.days
 )
 
 Game.create!(
-	theme: "FANCY ONE",
+	title: "FANCY ONE",
+	theme: "default",
 	start_time: Time.now + 4.days,
 	end_time: Time.now + 5.days
 )
