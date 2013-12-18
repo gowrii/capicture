@@ -35,7 +35,10 @@
 
           <div class="login-panel">
             <% if current_user %>
-              <p>Logged in as <%= current_user.email %>.</p>
+              <div data-alert class="alert-box">
+                Logged in as <%= current_user.email %>.
+                <a href="#" class="close">&times;</a>
+              </div>
               <%= link_to "Log Out", logout_path, class: "button radius" %>
             <% else %>
               <%= link_to "Log In", login_path, class: "button radius" %>
