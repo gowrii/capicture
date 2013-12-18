@@ -3,5 +3,5 @@ class Board < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :game
 
-  validates_uniqueness_of :user_id, on: :create
+  validates :user_id, uniqueness: { scope: :game_id, message: "You already created a board for this game." }
 end
