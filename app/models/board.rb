@@ -3,5 +3,5 @@ class Board < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :game
 
-  validates_uniqueness_of :game_id, on: :create
+  validates_uniqueness_of :user_id, on: :create
 end
