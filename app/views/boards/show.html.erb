@@ -1,16 +1,20 @@
-<h1>Board Show Page</h1>
+<h1><%= @board.game.title %></h1>
 
 <h3><%= @board.name %></h3>
+<%= link_to "Back", game_path(@board.game), class: "button radius"%>
+<p>Theme: <%= @board.game.theme %><br>
+	Created By: <%= @board.user.email %></p>
 
-<div class="answered-clues">
-	<% @game.user_answered(current_user).each do |answer| %>
+<% @game.user_answered(current_user).each do |answer| %>
+	<div class="panel">
 		<p><%= answer.clue.question %><br>
 		<%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
-	<% end %>
-</div>
+	</div>
+<% end %>
+
 
 <% if @board.user == current_user && @next_clue %>
-	<div class="unanswered-clues">
+	<div class="panel">
 		<h3><%= @next_clue.question %></h3>
 
 		<%= form_for [@next_clue, @answer], html: {multipart: :true} do |f| %>
