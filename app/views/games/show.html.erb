@@ -1,6 +1,6 @@
 <h1><%= @game.title %></h1>
 
-<%= link_to "Create a New Board", new_game_board_path(@game), class: "button radius" %>
+<%= link_to "Join Game", new_game_board_path(@game), class: "button radius" %>
 
 <% @game.boards.each do |board| %>
 	<div class="panel">
