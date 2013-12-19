@@ -45,6 +45,8 @@ S: A list of games (that are done) after each of their end_time on Index page
 
 G: Progress Meter on Board Show Page as user submits images
 
+G: Error message & Validation for empty image submissions
+
 √ other users can view another user's board content
 
 * Game Theme Model (categories)
