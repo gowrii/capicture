@@ -41,8 +41,6 @@ Things you may want to cover:
 
 S: Game Theme Model (categories)
 
-S: jQuery plugin: Timer countdown to the start_time of every Game on Index page
-
 √ S: A list of games (that are done) after each of their end_time on Index page
 
 √ G: Progress Meter on Board Show Page as user submits images
@@ -54,5 +52,7 @@ G: Error message & Validation for empty image submissions
 * Deploy
 
 * add AJAX requests to Board show page's forms
+
+* jQuery plugin: Timer countdown to the start_time of every Game on Index page
 
 * Create Sample Game for Friday's Demo
