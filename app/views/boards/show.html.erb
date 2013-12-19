@@ -5,13 +5,17 @@
 <p>Theme: <%= @board.game.theme %><br>
 	Created By: <%= @board.user.email %></p>
 
-<% @game.user_answered(@user).each do |answer| %>
+<div class ="progress">
+  <span class = "meter" style= "width:<%= @board.game.progress_bar(current_user)%>%"><%= @board.game.progress_bar(current_user)%>% Completed
+  </span>
+</div>
+
+<% @game.user_answered(current_user).each do |answer| %>
 	<div class="panel">
 		<p><%= answer.clue.question %><br>
 		<%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
 	</div>
 <% end %>
-
 
 <% if @board.user == current_user && @next_clue %>
 	<div class="panel">
