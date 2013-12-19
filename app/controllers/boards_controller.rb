@@ -10,7 +10,7 @@ class BoardsController < ApplicationController
 
 		# how do i make an instance variable which represents the "next" clue?
 		# HINT: I only want one clue.
-		@next_clue = @game.uncompleted_clues(current_user).first
+		@next_clue = @game.uncompleted_clues(@user).first
 	end
 
 	def new
