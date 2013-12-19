@@ -4,7 +4,7 @@ class Game < ActiveRecord::Base
   has_many :clues
 
   def ended?
-    self.start_time < Time.now
+    self.end_time <= Time.now
   end
 
   def completed_clues( user )
