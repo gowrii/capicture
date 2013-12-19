@@ -8,8 +8,8 @@
     <% if game.ended? == false %>
       <div class="panel">
       	<h3><%= link_to game.title, game_path(game) %></h3>
-      	<p>Starts On: <%= game.start_time %></p>
-      	<p>Closes On: <%= game.end_time %></p>
+      	<p>Starts On: <%= game.start_time.to_formatted_s(:long_ordinal) %></p>
+      	<p>Closes On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
       </div>
     <% end %>
   <% end %>
@@ -23,7 +23,7 @@
     <% if game.ended? == true %>
       <div class="panel">
         <h3><%= link_to game.title, game_path(game) %></h3>
-        <p>Closed On: <%= game.end_time %></p>
+        <p>Closed On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
       </div>
     <% end %>
   <% end %>

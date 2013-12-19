@@ -34,7 +34,7 @@ class Game < ActiveRecord::Base
   def progress_bar(user)
     total_clues = self.clues.count
     completed_clues_for_game = self.completed_clues( user ).count
-  
+    
     progress= (completed_clues_for_game.to_f / total_clues.to_f) * 100
     progress.ceil 
    end
