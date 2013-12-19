@@ -24,3 +24,7 @@
 		<% end %>
 	</div>
 <% end %>
+
+<div class ="progress">
+        <span class = "meter" style= "width: [1 - 100]%"><%= @board.game.progress_bar(current_user) %>% completed</span>
+</div>
