@@ -56,3 +56,15 @@ G: Error message & Validation for empty image submissions
 * jQuery plugin: Timer countdown to the start_time of every Game on Index page
 
 * Create Sample Game for Friday's Demo
+
+== COLOURS
+
+background light #F0FFF3
+background dark #DFFFEA
+
+Yellow #FFF27B
+Turquois #007385
+Coral #E04C59
+
+http://codepen.io/skimke/pen/nsKzl
+
