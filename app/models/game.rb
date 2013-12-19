@@ -3,6 +3,10 @@ class Game < ActiveRecord::Base
   has_many :boards
   has_many :clues
 
+  def ended?
+    self.end_time <= Time.now
+  end
+
   def completed_clues( user )
     clues = []
     user.answers.each do |answer|

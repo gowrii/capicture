@@ -1,9 +1,33 @@
-<h1>CAPICTURE</h1>
+<div class="row">
 
-<% @games.each do |game| %>
-  <div class="panel">
-  	<h3><%= link_to game.title, game_path(game) %></h3>
-  	<p>Starts On: <%= game.start_time %></p>
-  	<p>Closes On: <%= game.end_time %></p>
+  <div class="small-8 columns">
+
+  <h1>CAPICTURE</h1>
+
+  <% @games.each do |game| %>
+    <% if game.ended? == false %>
+      <div class="panel">
+      	<h3><%= link_to game.title, game_path(game) %></h3>
+      	<p>Starts On: <%= game.start_time %></p>
+      	<p>Closes On: <%= game.end_time %></p>
+      </div>
+    <% end %>
+  <% end %>
+
   </div>
-<% end %>
+
+  <div class="small-4 columns">
+  
+  <h1>Closed</h1>
+  <% @games.each do |game| %>
+    <% if game.ended? == true %>
+      <div class="panel">
+        <h3><%= link_to game.title, game_path(game) %></h3>
+        <p>Closed On: <%= game.end_time %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  </div>
+
+</div>
