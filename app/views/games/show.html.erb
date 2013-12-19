@@ -1,7 +1,7 @@
 <h1><%= @game.title %></h1>
 
 <% if @game.ended? == false %>
-  <h3>This game ends: <%= @game.end_time.to_formatted_s(:long_ordinal) %></h3>
+  <div class="panel">This game ends: <%= @game.end_time.to_formatted_s(:long_ordinal) %></div>
     <%= link_to "Join Game", new_game_board_path(@game), class: "button radius" %>
 
   <% @game.boards.each do |board| %>
@@ -13,7 +13,7 @@
   <% end %>
 
 <% else %>
-  <div class="panel">This game is currently closed.</div>
+  <div class="panel">This game closed on <%= @game.end_time.to_formatted_s(:long_ordinal) %>.</div>
   <% @game.boards.each do |board| %>
     <div class="panel">
       <h3><%= link_to board.name, board_path(board) %></h3>
