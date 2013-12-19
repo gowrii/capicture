@@ -2,7 +2,7 @@
 
   <div class="small-8 columns">
 
-  <h1>CAPICTURE</h1>
+  <h1>Play Now!</h1>
 
   <% @games.each do |game| %>
     <% if game.not_started? %>
@@ -12,9 +12,14 @@
         <p>Closes On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
       </div>
     <% elsif game.happenin? %>
-      <div class="panel">
-        <h3><%= game.title %></h3>
-        <p>Countdown</p>
+      <div class="row">
+        <div class="large-8 columns">
+          <h1>Wait For It...</h1>
+          <div class="panel">
+            <h3><%= game.title %></h3>
+            <p>Countdown</p>
+          </div>
+        </div>
       </div>
     <% end %>
   <% end %>
@@ -23,7 +28,7 @@
 
   <div class="small-4 columns">
   
-  <h1>Closed</h1>
+  <h1>Finished</h1>
   <% @games.each do |game| %>
     <% if game.ended? %>
       <div class="panel">
