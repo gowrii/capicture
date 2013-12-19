@@ -13,7 +13,6 @@ class Game < ActiveRecord::Base
         # the answer's clue is inserted into array
       end
     end
-
     clues
   end
 
@@ -24,9 +23,7 @@ class Game < ActiveRecord::Base
   def user_answered( user )
     completed_clue_ids = completed_clues(user).map(&:id)
     # array of clue ids that are completed by user    
-
     user_answers = Answer.where(:user_id => user.id).where(:clue_id => completed_clue_ids)
-    
     user_answers
   end
 end
