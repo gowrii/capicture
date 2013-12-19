@@ -5,6 +5,11 @@
 <p>Theme: <%= @board.game.theme %><br>
 	Created By: <%= @board.user.email %></p>
 
+<div class ="progress">
+  <span class = "meter" style= "width:<%= @board.game.progress_bar(current_user)%>%"><%= @board.game.progress_bar(current_user)%>% Completed
+  </span>
+</div>
+
 <% @game.user_answered(current_user).each do |answer| %>
 	<div class="panel">
 		<p><%= answer.clue.question %><br>
@@ -26,5 +31,6 @@
 <% end %>
 
 <div class ="progress">
-        <span class = "meter" style= "width: [1 - 100]%"><%= @board.game.progress_bar(current_user) %>% completed</span>
+  <span class = "meter" style= "width:<%= @board.game.progress_bar(current_user)%>%"><%= @board.game.progress_bar(current_user)%>% Completed
+  </span>
 </div>
