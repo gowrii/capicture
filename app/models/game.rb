@@ -4,11 +4,15 @@ class Game < ActiveRecord::Base
   has_many :clues
 
   def not_started?
-    self.start_time >= Time.now
+    self.start_time > Time.now
   end
   
   def ended?
-    self.end_time <= Time.now
+    self.end_time < Time.now
+  end
+
+  def happenin?
+    (self.start_time < Time.now) && (self.end_time > Time.now)
   end
 
   def completed_clues( user )
