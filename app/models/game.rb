@@ -3,6 +3,10 @@ class Game < ActiveRecord::Base
   has_many :boards
   has_many :clues
 
+  def not_started?
+    self.start_time >= Time.now
+  end
+  
   def ended?
     self.end_time <= Time.now
   end
