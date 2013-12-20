@@ -20,7 +20,6 @@ html {
 }
 
 body {
-
   background-color: #FFFFFF;
 }
 
@@ -46,6 +45,14 @@ a:active {
 
 a:hover {
   color: #ff8102;
+}
+
+.top-bar-section .right {
+  background-color: #fff;
+}
+
+.top-bar-section .right li {
+  position: relative;
 }
 
 .logo {
