@@ -15,3 +15,52 @@
 
 @import "foundation/components/panels";
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.wait h3 {
+  color: #FF8102;
+}
+
+a {
+  color: #FF8102;
+  hover: #90A69C;
+}
+
+.logo {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6em;
+}
+
+.panel {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+.finished {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #E04C59;
+}
+
+.wait {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #FFF27B;
+}
+
+.play {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #007385;
+}
+
+.meter {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  padding-left: 10px;
+}

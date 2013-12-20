@@ -6,7 +6,7 @@
 
   <% @games.each do |game| %>
     <% if game.not_started? %>
-      <div class="panel">
+      <div class="panel play">
         <h3><%= link_to game.title, game_path(game) %></h3>
         <p>Starts On: <%= game.start_time.to_formatted_s(:long_ordinal) %></p>
         <p>Closes On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="large-8 columns">
           <h1>Wait For It...</h1>
-          <div class="panel">
+          <div class="panel wait">
             <h3><%= game.title %></h3>
             <p>Countdown</p>
           </div>
@@ -31,7 +31,7 @@
   <h1>Finished</h1>
   <% @games.each do |game| %>
     <% if game.ended? %>
-      <div class="panel">
+      <div class="panel finished">
         <h3><%= link_to game.title, game_path(game) %></h3>
         <p>Closed On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
       </div>

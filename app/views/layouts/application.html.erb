@@ -9,26 +9,36 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+    <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div data-magellan-expedition="fixed">
-      <dl class="sub-nav left">
-        <dd><a href="/"><strong>CAPICTURE</strong></a></dd>
-        <dd data-magellan-arrival="games"><a href="/games/">Games</a></dd>
-        <dd data-magellan-arrival="boards"><a href="#">Themes</a></dd>
-        <dd data-magellan-arrival="users"><a href="#">Users</a></dd>
-      </dl>
-      <dl class="sub-nav right">
-        <% if current_user %>
-          <dd data-magellan-arrival="games">Logged in as <%= current_user.email %>.</dd>
-          <dd data-magellan-arrival="logout"><a href="/logout/">Log Out</a></dd>
-        <% else %>
-          <dd data-magellan-arrival="login"><a href="/login/">Log In</a></dd>
-          <dd data-magellan-arrival="signup"><a href="/signup/">Sign Up</a></dd>
-        <% end %>
-      </dl>
-    </div>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <a href="/"><span class="logo">CAPICTURE</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="active"><a href="/games/">Games</a></li>
+          <li class="active"><a href="#">Themes</a></li>
+          <li class="active"><a href="#">Users</a></li>
+        </ul>
+        <ul class="right">
+          <% if current_user %>
+            <li>Logged in as <%= current_user.email %>.</li>
+            <li class="active"><a href="/logout/">Log Out</a></li>
+          <% else %>
+            <li class="active"><a href="/login/">Log In</a></li>
+            <li class="active">s<a href="/signup/">Sign Up</a></li>
+          <% end %>
+        </ul>
+      </section>
+    </nav>
 
     <div class="row">
       <div class="large-8 columns">
