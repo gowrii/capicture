@@ -20,18 +20,32 @@ html {
 }
 
 body {
-  background-image:url('http://www.designlovefest.com/wp-content/uploads/downloads/2013/12/ashley2.jpg');
-  background-size: 600px;
+
   background-color: #FFFFFF;
 }
 
-.wait h3 {
-  color: #FF8102;
+h1 {
+  color: #ff8102;
 }
 
-a {
+.wait h3 {
   color: #244c17;
-  hover: #90A69C;
+}
+
+a:link {
+  color: #244c17;
+}
+
+a:visited {
+  color: #244c17;
+}
+
+a:active {
+  color: #244c17;
+}
+
+a:hover {
+  color: #ff8102;
 }
 
 .logo {
