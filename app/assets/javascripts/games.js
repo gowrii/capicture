@@ -5,7 +5,7 @@ var target_year = document.getElementById("yr").innerHTML;
 var target_month = document.getElementById("mon").innerHTML;
 var target_day = document.getElementById("day").innerHTML;
 
-var target_date = new Date(target_month + " " + target_date + ", " + target_year).getTime();
+var target_date = new Date(target_month + " " + target_day + ", " + target_year).getTime();
 
 var days, hours, minutes, seconds;
 

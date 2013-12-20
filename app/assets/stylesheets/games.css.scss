@@ -1,5 +1,25 @@
-section > div {
-    display: inline-block;
-    margin: 0  4px;
+section {
+  display: inline-block;
+  padding-right: 10px;
 }
 
+section > div {
+  display: inline-block;
+  margin: 0  4px;
+}
+
+.countdown p {
+  color: #244c17;
+}
+
+.time-box {
+  font-size: 0.8em;
+}
+
+.time-box div {
+  font-size: 1.4em;
+}
+
+span {
+  color: #244c17;
+}
