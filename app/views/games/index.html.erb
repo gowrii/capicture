@@ -7,7 +7,7 @@
     <% if game.happenin? %>
       <div class="panel play">
         <h3><%= link_to game.title, game_path(game) %></h3>
-        <p>Started On: <%= game.start_time.to_formatted_s(:long_ordinal) %></p>
+        <p>Started On: <%= game.start_time.strftime("%d:%H:%M:%S") %></p>
         <p>Closes On: <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
       </div>
     <% end %>
