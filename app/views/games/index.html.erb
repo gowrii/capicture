@@ -20,11 +20,12 @@
         <div class="large-8 columns">
           <div class="panel wait">
             <h3><%= game.title %></h3>
+            Starts in just:
             <section class="countdown">
-              <div id="day"><%= game.start_time.strftime("%d") %></div>
-              <div id="hr"><%= game.start_time.strftime("%H") %></div>
-              <div id="min"><%= game.start_time.strftime("%M") %></div>
-              <div id="sec"><%= game.start_time.strftime("%S") %></div>
+              <div class="time-box"><div id="day"><%= game.start_time.strftime("%d") %></div>days</div>
+              <div class="time-box"><div id="hr"><%= game.start_time.strftime("%H") %></div>hours</div>
+              <div class="time-box"><div id="min"><%= game.start_time.strftime("%M") %></div>minutes</div>
+              <div class="time-box"><div id="sec"><%= game.start_time.strftime("%S") %></div>seconds</div>
             </section>
           </div>
         </div>
@@ -34,9 +35,7 @@
 
 </div>
 
-
-
-  <div class="large-4 columns">
+<div class="large-4 columns">
   
   <h1>Finished</h1>
   <% @games.each do |game| %>
@@ -47,7 +46,5 @@
       </div>
     <% end %>
   <% end %>
-
-
 
 </div>
