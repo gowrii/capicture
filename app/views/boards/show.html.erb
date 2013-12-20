@@ -5,19 +5,22 @@
 <p>Theme: <%= @board.game.theme %><br>
 	Created By: <%= @board.user.email %></p>
 
-<div class="progress">
-  <span class="meter" style= "width:<%= @board.game.progress_bar(@user)%>%"><%= @board.game.progress_bar(@user)%>% Completed
-  </span>
+<div class="row">
+<div class="large-8 columns">
+
+<div class="progress radius">
+  <span class="meter" style="width:<%= @board.game.progress_bar(@user)%>%"><%= @board.game.progress_bar(@user)%>%</span>
 </div>
 
 <% @game.user_answered(@user).each do |answer| %>
 	<div class="panel">
 		<p><h3><%= answer.clue.question %></h3><br>
-		<%= image_tag answer.photo_url if answer.photo? %></p>
+		<%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
 	</div>
 <% end %>
 
 <% if @board.user == current_user && @next_clue %>
+
 	<div class="panel">
 		<h3><%= @next_clue.question %></h3>
 
@@ -39,4 +42,8 @@
 			<%= f.submit %>
 		<% end %>
 	</div>
+
 <% end %>
+
+</div>
+</div>
