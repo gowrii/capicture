@@ -27,7 +27,7 @@
           <ul class="right">
             <% if current_user %>
               <li class="active"><a href="/logout/">Log Out</a></li>
-              <li class="active">Logged in as <%= current_user.email %>.</li>
+              <li class="active status">Logged in as <%= current_user.email %></li>
             <% else %>
               <li class="active"><a href="/login/">Log In</a></li>
               <li class="active"><a href="/signup/">Sign Up</a></li>
