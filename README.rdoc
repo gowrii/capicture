@@ -43,17 +43,17 @@ Things you may want to cover:
 
 √ G: Progress Meter on Board Show Page as user submits images
 
-√ Error message & Validation for empty image submissions
+√ G: Error message & Validation for empty image submissions
 
-√ other users can view another user's board content
+√ S: other users can view another user's board content
 
-√ Timer countdown to the start_time of every Game on Index page - Codecademy javascript code used
+√ S: Timer countdown to the start_time of every Game on Index page - Codecademy javascript code used
 
 √ Create Sample Game for Friday's Demo
 
-S: Game Theme Model (categories)s
+√ S: Deploy
 
-* Deploy
+S: Game Theme Model (categories)s
 
 * add AJAX requests to Board show page's forms
 
