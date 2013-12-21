@@ -39,23 +39,23 @@ Things you may want to cover:
 
 √ Foundation: divs
 
-S: Game Theme Model (categories)
-
 √ S: A list of games (that are done) after each of their end_time on Index page
 
 √ G: Progress Meter on Board Show Page as user submits images
 
-G: Error message & Validation for empty image submissions
+√ Error message & Validation for empty image submissions
 
 √ other users can view another user's board content
+
+√ Timer countdown to the start_time of every Game on Index page - Codecademy javascript code used
+
+√ Create Sample Game for Friday's Demo
+
+S: Game Theme Model (categories)s
 
 * Deploy
 
 * add AJAX requests to Board show page's forms
-
-* jQuery plugin: Timer countdown to the start_time of every Game on Index page
-
-* Create Sample Game for Friday's Demo
 
 == COLOURS
 
@@ -67,4 +67,3 @@ Turquois #007385
 Coral #E04C59
 
 http://codepen.io/skimke/pen/nsKzl
-
