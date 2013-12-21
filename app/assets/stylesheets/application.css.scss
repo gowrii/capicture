@@ -25,10 +25,6 @@ h1 {
   color: #ff8102;
 }
 
-.wait h3 {
-  color: #244c17;
-}
-
 a:link {
   color: #244c17;
 }
@@ -49,10 +45,6 @@ a:hover {
   background-color: #fff;
 }
 
-.top-bar-section .right li {
-  position: relative;
-}
-
 .status {
   padding-top: 10px;
 }
@@ -64,28 +56,4 @@ a:hover {
 
 .panel {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-}
-
-.finished {
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  border: 5px solid #E04C59;
-}
-
-.wait {
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  border: 5px solid #FFF27B;
-}
-
-.play {
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  border: 5px solid #007385;
-}
-
-.meter {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
-  padding-left: 10px;
 }

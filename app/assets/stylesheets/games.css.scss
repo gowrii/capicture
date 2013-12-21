@@ -1,3 +1,25 @@
+.finished {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #E04C59;
+}
+
+.wait {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #FFF27B;
+}
+
+.wait h3 {
+  color: #244c17;
+}
+
+.play {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 5px solid #007385;
+}
+
 section {
   display: inline-block;
   padding-right: 10px;
