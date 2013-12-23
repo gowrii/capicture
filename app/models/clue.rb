@@ -6,9 +6,8 @@ class Clue < ActiveRecord::Base
 		self.answers.where(user_id: user.id).present?
 	end
 
- def meter
-      total_clues = game.clues.count
-      meter = (clues.count / total_clues) * 100
-    end
-    
+  def meter
+    total_clues = game.clues.count
+    meter = (clues.count / total_clues) * 100
+  end  
 end

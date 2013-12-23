@@ -51,9 +51,13 @@ Things you may want to cover:
 
 √ Create Sample Game for Friday's Demo
 
-√ S: Deploy
+√ S: Deploy to Heroku
 
-S: Game Theme Model (categories)s
+S: Move new clues form into new game form
+
+S: Add Admin User access to new game form
+
+S: Game Theme Model (categories)
 
 * add AJAX requests to Board show page's forms
 
