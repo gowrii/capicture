@@ -1,27 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Capicture is an online scavenger hunt app. Each game will give you a hint or prompt to which you must upload a photo. Envisioned as a fun way to share images with friends and possibly spur people to become a competitive photographer.
 
 == TODO
 
@@ -53,13 +32,13 @@ Things you may want to cover:
 
 √ S: Deploy to Heroku
 
-S: Move new clues form into new game form
+S: Game Theme Model (A.K.A. categories)
+
+S: New game form should include nested forms for its clues
 
 S: Add Admin User access to new game form
 
-S: Game Theme Model (categories)
-
-* add AJAX requests to Board show page's forms
+S: Game show page displays all board content!!! - must go to board show page to work on it, however
 
 == COLOURS
 
