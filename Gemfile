@@ -48,7 +48,7 @@ gem 'sorcery'
 gem 'rmagick'
 gem 'carrierwave'
 
-gem 'foundation-rails'
+# gem 'foundation-rails'
 
 gem 'rails_12factor', group: :production
 

@@ -48,5 +48,8 @@ background dark #DFFFEA
 Yellow #FFF27B
 Turquois #007385
 Coral #E04C59
+#FAE3D5
 
 http://codepen.io/skimke/pen/nsKzl
+
+

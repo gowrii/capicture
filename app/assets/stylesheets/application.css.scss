@@ -8,21 +8,106 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require foundation_and_overrides
  *= require_self
  *= require_tree .
  */
 
+aside, article, section, header, footer, nav {
+  display: block;
+}
+div, h1, h2, h3, p, img {
+  margin: 0;
+  padding: 0;
+}
 html {
+  background-image: url('background1.jpg');
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: #FFFFFF;
+  margin: 0 auto;
+  height: 100%;
+  width : 1500px;
+  background: #FAE3D5;
+  color: #461837;
+  }
+
+
+.logo_back {
+  position: relative;
+  margin-top: 0px;
+  z-index: 1;
+ 
+}
+.iconone {
+  position: relative;
+    left: 535px;
+    top: -375px;
+    margin-bottom: -180px;
+    z-index: 999998;
+    display: none;
+    
 }
 
-h1 {
-  color: #ff8102;
+.iconone3 {
+  position: relative;
+    left: 760px;
+    top: -395px;
+    margin-bottom:-205px;
+    z-index: 999999;
+    display: none;
+   
+}
+
+.iconone2 {
+  position: relative;
+    left: 920px;
+    top: -170px;
+    margin-bottom:-160px;
+    z-index: 999997;
+    display: none;
+    
+
+}
+
+.iconone4 {
+  position: relative;
+    left: 1190px;
+    top: -340px;
+    margin-bottom: -188px;
+    z-index: 999996;
+    display: none;
+    
+}
+.nav-div {
+  background-color: #5dbabc;
+  height: 65px;
+  border-top: 4px solid #FAE3D5;
+  
+}
+
+.top{
+  
+  margin: 0 0 0 0;
+  padding: 0;
+  float: right;
+}
+
+.active, .active-status, .game, .name{
+display: inline-block;
+padding: 25px 20px;
+text-decoration: none;
+float: right;
+font-size: 25px;
+}
+
+.name {
+font-size: 30px;
+}
+
+.game{
+
+margin-right: 500px;
 }
 
 a:link {

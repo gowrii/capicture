@@ -15,4 +15,9 @@
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+
+
+  $('.iconone').hide().delay(800).fadeIn(500);
+  $('.iconone2').hide().delay(1500).fadeIn(500);
+  $('.iconone3').hide().delay(2000).fadeIn(500);
+  $('.iconone4').hide().delay(3000).fadeIn(500);
