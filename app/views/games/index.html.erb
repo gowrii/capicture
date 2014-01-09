@@ -5,10 +5,17 @@
 <div class= "iconone3"><%= image_tag('iconsonly3.jpg', :height => '200px')%></div>
 <div class= "iconone4"><%= image_tag('iconsonl4y.jpg', :height => '185px')%></div>
 <% end %>
-<div class="row">
 
-  <div class="large-8 columns">
+<section class= "intro">
+  <p>Welcome to the Capicture Scavenger Hunt</p>
+  <p>Play &amp; Explore the city of Toronto</p>
+  <p class= "desc">Join a Game and answer the clues by uploading a picture to unlock the next clue. </p>
+</section>
 
+
+
+<section class= "all-games">
+<div class= "now">
   <h1>Play Now!</h1>
   <% @games.each do |game| %>
     <% if game.happenin? %>
@@ -19,37 +26,36 @@
       </div>
     <% end %>
   <% end %>
+</div>
 
+<div class= "waiting">
   <h1>Wait For It...</h1>
   <% @games.each do |game| %>
     <% if game.not_started? %>
       <div class="row">
-        <div class="large-8 columns">
-          <div class="panel wait">
-            <h3><%= game.title %></h3>
-            <section class="countdown">
-              <p>You have:</p>
-              <div class="time-box"><div id="day"><%= game.start_time.strftime("%d") %></div>days</div>
-              <div class="time-box"><div id="hr"><%= game.start_time.strftime("%H") %></div>hours</div>
-              <div class="time-box"><div id="min"><%= game.start_time.strftime("%M") %></div>minutes</div>
-              <div class="time-box"><div id="sec"><%= game.start_time.strftime("%S") %></div>seconds</div>
-            </section>
-            <section class="countdown">
-              <p>Starting in:</p>
-              <div class="time-box"><div id="mon"><%= game.start_time.strftime("%b") %></div>month</div>
-              <div class="time-box"><div id="yr"><%= game.start_time.strftime("%Y") %></div>year</div>
-            </section>
-          </div>
+        <div class="panel wait">
+          <h3><%= game.title %></h3>
+          <section class="date">
+            <p>This Game Begins</p>
+            <div class="time-box"><div id="mon"><%= game.start_time.strftime("%b") %></div>month</div>
+            <div class="time-box"><div id="yr"><%= game.start_time.strftime("%Y") %></div>year</div>
+          </section>
+
+          <section class="countdown">
+            <div class="time-box"><div id="day"><%= game.start_time.strftime("%d") %></div>days</div>
+            <div class="time-box"><div id="hr"><%= game.start_time.strftime("%H") %></div>hours</div>
+            <div class="time-box"><div id="min"><%= game.start_time.strftime("%M") %></div>minutes</div>
+            <div class="time-box"><div id="sec"><%= game.start_time.strftime("%S") %></div>seconds</div>
+          </section>
         </div>
       </div>
     <% end %>
   <% end %>
-
 </div>
 
-<div class="large-4 columns">
+ <div class="all-done">
   
-  <h1>Finished</h1>
+  <h1 class= "fin">Finished</h1>
   <% @games.each do |game| %>
     <% if game.ended? %>
       <div class="panel finished">
@@ -58,5 +64,9 @@
       </div>
     <% end %>
   <% end %>
-
 </div>
+</section>
+
+
+
+<footer>blah</footer>
