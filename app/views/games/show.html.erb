@@ -1,21 +1,24 @@
-<h1><%= @game.title %></h1>
+<h1 class= "game-showpage-title"><%= @game.title %></h1>
 
 <% if @game.ended? == false %>
-  <div class="panel">This game ends: <%= @game.end_time.to_formatted_s(:long_ordinal) %></div>
-    <%= link_to "Join Game", new_game_board_path(@game), class: "button radius" %>
-
-  <% @game.boards.each do |board| %>
-  	<div class="panel">
+  <section class= "gameshowpage">
+    <div class="showplay">This game ends: <%= @game.end_time.to_formatted_s(:long_ordinal) %></div>
+    <% @game.boards.each do |board| %>
+    <div class="panel2">
+      <p class= "gamepage-theme">Game Theme: <%= board.game.theme %></p>
       <h3><%= link_to board.name, board_path(board) %></h3>
-      <p>Theme: <%= board.game.theme %></p>
       <p>Created By: <%= board.user.email %></p>
     </div>
   <% end %>
+</section>
+  <button><%= link_to "Create A Game Board", new_game_board_path(@game)%></button>
+
+
 
 <% else %>
-  <div class="panel">This game closed on <%= @game.end_time.to_formatted_s(:long_ordinal) %>.</div>
+  <div class="showplay">This game closed on <%= @game.end_time.to_formatted_s(:long_ordinal) %>.</div>
   <% @game.boards.each do |board| %>
-    <div class="panel">
+    <div class="showplay">
       <h3><%= link_to board.name, board_path(board) %></h3>
       <p>Theme: <%= board.game.theme %></p>
       <p>Created By: <%= board.user.email %></p>

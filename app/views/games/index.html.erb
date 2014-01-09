@@ -7,55 +7,59 @@
 <% end %>
 
 <section class= "intro">
-  <p>Welcome to the Capicture Scavenger Hunt</p>
-  <p>Play &amp; Explore the city of Toronto</p>
-  <p class= "desc">Join a Game and answer the clues by uploading a picture to unlock the next clue. </p>
+  <p class= "main-title">Capicture </p> 
+  <p class= "desc-line-two">The Scavenger Hunt Game</p>
+  <p class= "desc-line-three">Play &amp; Explore the city of Toronto</p>
+  <p class= "desc">Join a Game and answer clues by uploading a picture to unlock the next clue. </p>
 </section>
 
 
 
 <section class= "all-games">
-<div class= "now">
-  <h1>Play Now!</h1>
-  <% @games.each do |game| %>
-    <% if game.happenin? %>
-      <div class="panel play">
-        <h3><%= link_to game.title, game_path(game) %></h3>
-        <p><span>Started On:</span> <%= game.start_time.to_formatted_s(:long_ordinal) %></p>
-        <p><span>Closes On:</span> <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-
-<div class= "waiting">
-  <h1>Wait For It...</h1>
-  <% @games.each do |game| %>
-    <% if game.not_started? %>
-      <div class="row">
-        <div class="panel wait">
-          <h3><%= game.title %></h3>
-          <section class="date">
-            <p>This Game Begins</p>
-            <div class="time-box"><div id="mon"><%= game.start_time.strftime("%b") %></div>month</div>
-            <div class="time-box"><div id="yr"><%= game.start_time.strftime("%Y") %></div>year</div>
-          </section>
-
-          <section class="countdown">
-            <div class="time-box"><div id="day"><%= game.start_time.strftime("%d") %></div>days</div>
-            <div class="time-box"><div id="hr"><%= game.start_time.strftime("%H") %></div>hours</div>
-            <div class="time-box"><div id="min"><%= game.start_time.strftime("%M") %></div>minutes</div>
-            <div class="time-box"><div id="sec"><%= game.start_time.strftime("%S") %></div>seconds</div>
-          </section>
+  <div class= "now">
+    <h1>Play Now!</h1>
+    <% @games.each do |game| %>
+      <% if game.happenin? %>
+        <div class="panel play">
+          <h3><%= link_to game.title, game_path(game) %></h3>
+          <p><span>Started On:</span> <%= game.start_time.to_formatted_s(:long_ordinal) %></p>
+          <p><span>Closes On:</span> <%= game.end_time.to_formatted_s(:long_ordinal) %></p>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
- <div class="all-done">
-  
-  <h1 class= "fin">Finished</h1>
+  <div class= "waiting">
+    <h1>Wait For It...</h1>
+    <% @games.each do |game| %>
+      <% if game.not_started? %>
+        <div class="row">
+          <div class="large-8 columns">
+            <div class="panel wait">
+              <h3><%= game.title %></h3>
+              <section class="date">
+                <p>This Game Begins</p>
+                <div class="time-box"><div id="mon"><%= game.start_time.strftime("%b") %></div>month</div>
+                <div class="time-box"><div id="yr"><%= game.start_time.strftime("%Y") %></div>year</div>
+              </section>
+
+              <section class="countdown">
+                <div class="time-box"><div id="day"><%= game.start_time.strftime("%d") %></div>days</div>
+                <div class="time-box"><div id="hr"><%= game.start_time.strftime("%H") %></div>hours</div>
+                <div class="time-box"><div id="min"><%= game.start_time.strftime("%M") %></div>minutes</div>
+                <div class="time-box"><div id="sec"><%= game.start_time.strftime("%S") %></div>seconds</div>
+              </section>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+ 
+  <div class="all-done">
+  <h1 class= "fin">These Games Have Ended</h1>
+  <h3 class= "fin-description">Browse through your game boards or check out other player's boards</h3>
   <% @games.each do |game| %>
     <% if game.ended? %>
       <div class="panel finished">

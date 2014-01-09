@@ -80,7 +80,7 @@ body {
     
 }
 .nav-div {
-  background-color: #5dbabc;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#aad8b1), color-stop(53%,#5dbabc), color-stop(100%,#519b9b));
   height: 65px;
   border-top: 4px solid #FAE3D5;
   
@@ -99,17 +99,24 @@ padding: 25px 20px;
 text-decoration: none;
 float: right;
 font-size: 25px;
-}
+font-family: 'Josefin Sans', sans-serif;}
 
 .name {
-font-size: 30px;
+font-size: 40px;
+font-family: 'Leckerli One', Helvetica, sans-serif;
+margin-top: -20px;
+color: red;
+
 }
 
-.game{
-
-margin-right: 500px;
+.game {
+font-family: 'Josefin Sans', sans-serif;
+margin-right: 585px;
 }
 
+a{
+  text-decoration: none;
+}
 a:link {
   color: #244c17;
 }
@@ -126,19 +133,8 @@ a:hover {
   color: #ff8102;
 }
 
-.top-bar-section .right {
-  background-color: #fff;
-}
 
 .status {
   padding-top: 10px;
 }
 
-.logo {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.6em;
-}
-
-.panel {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-}
