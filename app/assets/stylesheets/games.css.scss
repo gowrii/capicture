@@ -1,14 +1,15 @@
 
 .intro {
+height: 400px;
+  width : 1500px;
   text-align: center;
-  clear: all;
   color: black;
   font-size: 40px;
-  margin-left: 40px;
-  margin-bottom: 30px;
-  marging-top: 30px;
-  padding: 175px 0;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  padding: 150px 0;
   font-family: 'Josefin Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
 }
 .main-title {
   color:#519b9b;
@@ -42,23 +43,34 @@ padding-bottom: 20px;
 .all-done {
   height: 1300px;
   width : 1500px;
-  border: 2px solid black;
+  border-top: 5px solid white;
   display: block-inline;
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
+  border-top: 10px solid #fae3d5;
 }
 
 .fin{
   font-family: 'Leckerli One', Helvetica, sans-serif;
-  font-size: 45px;
-  color: #244c17;
+  font-size: 85px;
+  font-weight: normal;
+  color:#519b9b;
   margin-top: 75px;
   margin-bottom: 20px;
 }
 .fin-description {
-  font-size: 25px;
+  font-size: 30px;
   color: #244c17;
   margin-bottom: 80px;
   margin-top: 15px;
+}
+.finished h3 {
+  font-size: 25px;
+  padding: 15px;
+}
+.finished p {
+  font-size: 20px;
+
 }
 
 .wait {
@@ -75,31 +87,38 @@ padding-bottom: 20px;
 .waiting {
   height: 800px;
   width : 1500px;
-  border: 2px solid black;
-  display: block-inline;
+  border-top: 10px solid #fae3d5;
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
 }
 
 .waiting h1 {
   font-family: 'Leckerli One', Helvetica, sans-serif;
-  font-size: 45px;
-  color: #244c17;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  font-size: 85px;
+  font-weight: normal;
+  color:#519b9b;
+  margin-top: 80px;
 }
 
+.waiting-description{
+  font-size: 30px;
+  color: #244c17;
+  margin-bottom: 80px;
+  margin-top: 15px;
+}
 .waiting h3 {
-  font-size: 35px;
+  font-size: 40px;
   padding-top: 35px;
   padding-bottom: 20px;
 }
 .date p {
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  margin-left:18px;
 }
 .date .time-box {
   padding-bottom: 40px;
-  font-size: 18px;
+  font-size: 21px;
 }
 
 .countdown{
@@ -133,27 +152,45 @@ padding-bottom: 20px;
   margin-left: 107px;
   margin-top: 50px;
   float: left;
+  position:relative;
+  
 }
+.play p{
+  font-size: 25px;
+  padding-top: 26px;
+}
+
 .now {
   height: 800px;
   width : 1500px;
-  border: 2px solid black;
+  border-top: 5px solid white;
   display: block-inline;
   text-align: center;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
+  position:relative;
+
 }
 
 .now h1 {
-  font-size: 45px;
-  color: #244c17;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  font-size: 85px;
+  font-weight: normal;
+  color:#519b9b;
+  margin-top: 80px;
   font-family: 'Leckerli One', Helvetica, sans-serif;  
 }
 .now h3 {
   font-size: 35px;
-  padding-top: 35px;
-  padding-bottom: 20px;
-  text-decoration: none; 
+  font-weight: 900;
+  padding-top: 45px;
+  padding-bottom: 15px;
+  text-decoration:none; 
+}
+
+.now .playnow-description{
+  font-size: 30px;
+  color: #244c17;
+  margin-bottom: 30px;
+  padding-top:25px;
 }
 
 section {
@@ -163,7 +200,7 @@ section {
 
 section > div {
   display: inline-block;
-  margin: 0 15 px;
+
 }
 
 .countdown p {
@@ -178,24 +215,52 @@ section > div {
   font-size: 1.4em;
 }
 
+.board-container {
+  height: 3000px;
+  width: 1500px;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+
 .game-showpage-title{
   font-size: 70px;
    font-family: 'Josefin Sans', sans-serif;
-    margin-left: 40px;
+    margin-left: 60px;
+    margin-top: 60px;
     padding: 25px;
-}
-
-.showplay {
- margin-top: 50px;
+    font-family: 'Leckerli One', Helvetica, sans-serif;
 }
 
 .gameshowpage {
-  height: 500px;
-  width: 500px;
-  border: 2px solid black;
-  font-size: 30px;
+  border-radius: 75px;
+  background-color: #FFFFFF;
+  border: 5px solid #007385;
+  height:350px;
+  width:350px;
+  margin-left: 107px;
+  margin-top: 50px;
+  float: left;
   text-align: center;
-  margin-left: 30px;
+  font-size: 20px;
+}
+.board-name {
+  margin-top: 70px;
+  font-size: 50px;
+
+}
+.board-label {
+  font-size: 20px;
+  padding-top: 75px;
+}
+
+.board-username {
+  font-size: 30px;
+}
+
+.showplay {
+  height: 300px;
+  width: 700px;
+  font-size: 30px;
+  margin-left: 90px;
   border-radius:50px;
   }
 
@@ -204,11 +269,17 @@ section > div {
   }
 
   button {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 300px;
   font-size: 20px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#aad8b1), color-stop(53%,#5dbabc), color-stop(100%,#519b9b));
   border-radius: 35px;
   height: 65px;
   float: right;
+  margin-right: 350px;
+  
   }
+.formatted {
+  font-size: 45px;
+  padding-top: 15px;
+}

@@ -1,18 +1,21 @@
-<h3> New Board </h3>
-  <% if current_user %>
-    <%=form_for [@game, @board] do |f| %>
+<div class= "new-board-form">
+  <div class= "form">
+    <h3 class="new-board"> Name You're New Game Board 
+    </h3>
+    <% if current_user %>
+      <%=form_for [@game, @board] do |f| %>
 
-    <% if @board.errors.any? %>
-      <div id="error-message">
-        <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+      <% if @board.errors.any? %>
+        <div id="error-message">
+          <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
 
-        <ul>
-          <% @board.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+          <ul>
+            <% @board.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
       <div class= "field">
         <%= f.label :name %><br/>
@@ -21,9 +24,11 @@
 
       <div class= "action">
         <%= f.submit %>
-       </div>
+      </div>
     <% end %>
 
-  <% else %>
-    <p>Please <%= link_to "log in", new_session_path %> to create a board.</p>
-  <% end %>
+    <% else %>
+      <p>Please <%= link_to "log in", new_session_path %> to create a board.</p>
+    <% end %>
+  </div>
+</div>

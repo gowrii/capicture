@@ -1,18 +1,22 @@
+<div class= "board-container">
 <h1 class= "game-showpage-title"><%= @game.title %></h1>
 
 <% if @game.ended? == false %>
-  <section class= "gameshowpage">
-    <div class="showplay">This game ends: <%= @game.end_time.to_formatted_s(:long_ordinal) %></div>
-    <% @game.boards.each do |board| %>
-    <div class="panel2">
-      <p class= "gamepage-theme">Game Theme: <%= board.game.theme %></p>
-      <h3><%= link_to board.name, board_path(board) %></h3>
-      <p>Created By: <%= board.user.email %></p>
-    </div>
-  <% end %>
-</section>
-  <button><%= link_to "Create A Game Board", new_game_board_path(@game)%></button>
+<button><%= link_to "Create A Game Board", new_game_board_path(@game)%></button>
+    </section>
+    <div class="showplay">Game Ends: <span class=formatted><%= @game.end_time.to_formatted_s(:long_ordinal) %></span>
+    <p class= "gamepage-theme">Game Theme: <span class=formatted><%= @game.theme %></span></p>
+  </div>
 
+    <% @game.boards.each do |board| %>
+      <section class= "gameshowpage">
+        <div class="panel2">
+          <h3 class= "board-name"><%= link_to board.name, board_path(board) %></h3>
+          <p class="board-label">This board belongs to:<p class= "board-username"><%= board.user.email %></p></p>
+        </div>
+      </section>
+    <% end %>
+  </div>
 
 
 <% else %>
