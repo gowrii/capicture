@@ -3,49 +3,45 @@
     <h1 class= "game-board-title"><%= @board.game.title %></h1>
     <h3 class= "bb">Board Name: <%= @board.name %></h3>
     <p class= "created-by">Created By: <%= @board.user.email %></p>
-   
-   
 
-  <div class="row">
+<div class="row">
 
-    <div class="progress radius">
-      <span class="meter" style="width:<%= @board.game.progress_bar(@user)%>%"><%= @board.game.progress_bar(@user)%>%</span>
-    </div>
-
-    <% @game.user_answered(@user).each do |answer| %>
-    	<div class="question">
-    		<p><h3><%= answer.clue.question %></h3><br>
-    		<%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
-    	</div>
-      <div class "space"></div>
-    <% end %>
-
-    <% if @board.user == current_user && @next_clue %>
-      <% if @board.game.ended? == false %>
-        <div class="question">
-          <h3><%= @next_clue.question %></h3>
-
-          <%= form_for [@next_clue, @answer], html: {multipart: :true} do |f| %>
-            <% if @answer.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this Photo from being saved:</h2>
-
-                <ul>
-                  <% @answer.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                  <% end %>
-                </ul>
-              </div>
-            <% end %>
-            
-            <p><%= f.label :photo %>
-            <%= f.file_field :photo %></p>
-            <%= f.submit %>
-          <% end %>
-        </div>
-        <div class "space"></div>
-      <% end %>
-    <% end %>
-
-    </div>
+  <div class="progress radius">
+    <span class="meter" style="width:<%= @board.game.progress_bar(@user)%>%"><%= @board.game.progress_bar(@user)%>%</span>
   </div>
+
+  <% @game.user_answered(@user).each do |answer| %>
+    <div class="question">
+      <p><h3><%= answer.clue.question %></h3><br>
+      <%= image_tag answer.photo_url(:thumb) if answer.photo? %></p>
+    </div>
+  <% end %>
+
+  <% if @board.user == current_user && @next_clue %>
+    <% if @board.game.ended? == false %>
+      <div class="question">
+        <h3><%= @next_clue.question %></h3>
+
+        <%= form_for [@next_clue, @answer], html: {multipart: :true} do |f| %>
+          <% if @answer.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this Photo from being saved:</h2>
+
+              <ul>
+                <% @answer.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          
+          <p><%= f.label :photo %>
+          <%= f.file_field :photo %></p>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
+  </div>
+</div>

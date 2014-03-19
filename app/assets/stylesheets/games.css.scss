@@ -107,18 +107,17 @@ padding-bottom: 20px;
   margin-top: 15px;
 }
 .waiting h3 {
-  font-size: 40px;
+  font-size: 35px;
   padding-top: 35px;
   padding-bottom: 20px;
 }
 .date p {
   padding-bottom: 10px;
-  font-size: 25px;
-  margin-left:18px;
+  font-size: 20px;
 }
 .date .time-box {
   padding-bottom: 40px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .countdown{
@@ -219,6 +218,7 @@ section > div {
   height: 3000px;
   width: 1500px;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
   }
 
 .game-showpage-title{
@@ -227,6 +227,7 @@ section > div {
     margin-left: 60px;
     margin-top: 60px;
     padding: 25px;
+    font-weight: normal;
     font-family: 'Leckerli One', Helvetica, sans-serif;
 }
 
@@ -258,16 +259,53 @@ section > div {
 
 .showplay {
   height: 300px;
-  width: 700px;
+  width: 1315px;
   font-size: 30px;
   margin-left: 90px;
-  border-radius:50px;
+  border-bottom:10px solid #007385;
   }
 
-  .gamepage-theme {
+  .showplay1 {
+  border-radius: 75px;
+  background-color: #FFFFFF;
+  border: 5px solid #007385;
+  height:350px;
+  width:350px;
+  margin-left: 107px;
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 50px;
+
+}
+.showplay1 h3 {
+  font-size:45px;
+  padding-bottom: 50px;
+}
+.showplay1 p{
+  font-size:30px;
+  padding-bottom:25px;
+}
+.showplay2 {
+  height: 300px;
+  width: 1315px;
+  font-size: 45px;
+  margin-left: 90px;
+  border-bottom:10px solid #007385;
+  padding-top: 20px;
+}
+
+.gamepage-theme {
   margin-top: 30px
   }
 
+.player{
+  margin-left: 37%;
+  font-size: 50px;
+  padding-top: 30px
+
+}
   button {
   margin-top: 20px;
   width: 300px;

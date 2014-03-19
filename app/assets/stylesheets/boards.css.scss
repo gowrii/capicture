@@ -1,32 +1,43 @@
-.form {
-  width: 800px;
-  height:400px;
+.formb {
+  width: 500px;
+  height:500px;
   border-radius:40px;
   background: #fff;
   border: 5px solid #E04C59;
-  margin-left: 350px;
+  margin-left: 33%;
   margin-top: 90px;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
 }
-.new-board {
-  font-size: 25px;
-  width: 700px;
+.new-boards {
+  font-size: 30px;
+  width: 500px;
   margin-top: 40px;
   padding-top: 80px;
-  padding-left: 50px;
-
-
+  padding-bottom:50px;
 }
+
 .new-board-form {
-  height:800px;
+  height:100%;
 }
 
-.form .field {
-  padding-top: 50px;
-  padding-bottom: 100px;
-  font-size: 40px;
+.field {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 60px;
   
+}
+.board_name_text{
+  height: 40px;
+  font-size: 35px;
+  padding-to:15px;
+}
+
+.submit_board{
+  width:200px;
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#aad8b1), color-stop(53%,#5dbabc), color-stop(100%,#519b9b));
+  border-radius: 10px;
 }
 .back-button {
   font-size: 25px;
@@ -43,11 +54,11 @@
 .user-game-board {
   width:900px;
   height:5000px;
-  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
   border-radius: 30px;
   text-align: center;
   margin: 100px auto;
-  border: 2px solid black;
+  border: 10px solid white;
 
 
 }
@@ -68,25 +79,45 @@ color: #519b9b;
 }
 .question {
   width: 700px;
-  height: 700px;
+  height: 600px;
   border: 10px solid #519b9b;
   border-radius: 25px;
-  margin-left: 100px;
+  margin-left: 90px;
   padding-top: 20px;
-  padding-bottom:30px;
+  padding-bottom:40px;
   margin-top:40px;
   font-size: 35px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#fae3d5), color-stop(100%,#ffffff));
 }
 
 .question h3 {
   padding: 25px 0;
 
 }
-.something {
-  
+.upload_pic_field{
+  width: 300px;
+  font-size:20px;
+  border-radius: 10px;
+
+  padding: 10px;
+  margin-top:50px;
+  text-align:center;
 }
+#answer_photo{
+
+}
+
+.upload_pic{
+  width: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#aad8b1), color-stop(53%,#5dbabc), color-stop(100%,#519b9b));
+  font-size:20px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top:50px;
+}
+
 .meter {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
+  color: black;
   padding-left: 10px;
 }

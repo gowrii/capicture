@@ -7,7 +7,7 @@
     <div class="showplay">Game Ends: <span class=formatted><%= @game.end_time.to_formatted_s(:long_ordinal) %></span>
     <p class= "gamepage-theme">Game Theme: <span class=formatted><%= @game.theme %></span></p>
   </div>
-
+    <div class= "player">Players in this Game</div>
     <% @game.boards.each do |board| %>
       <section class= "gameshowpage">
         <div class="panel2">
@@ -20,9 +20,11 @@
 
 
 <% else %>
-  <div class="showplay">This game closed on <%= @game.end_time.to_formatted_s(:long_ordinal) %>.</div>
+  <div class="showplay2">This game closed on <%= @game.end_time.to_formatted_s(:long_ordinal) %>.
+  </div>
+  <div class= "player">Players in this Game</div>
   <% @game.boards.each do |board| %>
-    <div class="showplay">
+    <div class="showplay1">
       <h3><%= link_to board.name, board_path(board) %></h3>
       <p>Theme: <%= board.game.theme %></p>
       <p>Created By: <%= board.user.email %></p>
