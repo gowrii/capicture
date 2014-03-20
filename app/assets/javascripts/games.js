@@ -1,6 +1,5 @@
 var now = new Date();
 var current_year = now.getFullYear();
-
 var target_year = document.getElementById("yr").innerHTML;
 var target_month = document.getElementById("mon").innerHTML;
 var target_day = document.getElementById("day").innerHTML;

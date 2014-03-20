@@ -20,7 +20,7 @@ div, h1, h2, h3, p, img {
   padding: 0;
 }
 html {
-  backgrond-image: image-url("background1.jpg");
+  background-image: image-url("background1.jpg");
   -webkit-font-smoothing: antialiased;
 }
 
@@ -46,7 +46,7 @@ body {
     top: -375px;
     margin-bottom: -180px;
     z-index: 999998;
-    display: none;
+    // display: none;
     
 }
 
@@ -56,7 +56,7 @@ body {
     top: -395px;
     margin-bottom:-205px;
     z-index: 999999;
-    display: none;
+    // display: none;
    
 }
 
@@ -66,7 +66,7 @@ body {
     top: -170px;
     margin-bottom:-160px;
     z-index: 999997;
-    display: none;
+    // display: none;
     
 
 }
@@ -77,7 +77,7 @@ body {
     top: -340px;
     margin-bottom: -188px;
     z-index: 999996;
-    display: none;
+    // display: none;
     
 }
 .nav-div {
