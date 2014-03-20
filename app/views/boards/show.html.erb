@@ -7,7 +7,7 @@
 <div class="row">
 
   <div class="progress radius">
-    <span class="meter" style="width:<%= @board.game.progress_bar(@user)%>%"><%= @board.game.progress_bar(@user)%>%</span>
+    <span class="meter"><%= @board.game.progress_bar(@user)%>% completed</span>
   </div>
 
   <% @game.user_answered(@user).each do |answer| %>

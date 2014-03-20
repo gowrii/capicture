@@ -47,6 +47,7 @@ gem 'sorcery'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'fog'
 
 # gem 'foundation-rails'
 
